@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import API from "./api"; // ✅ Use centralized axios instance
+import API from "../api"; // ✅ Use centralized axios instance
 
 const btnColors = ["red", "blue", "green", "purple"];
 
