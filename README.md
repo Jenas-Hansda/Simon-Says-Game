@@ -8,7 +8,7 @@ A full-stack implementation of the classic **Simon Says** memory game built usin
 
 ## 🚀 Live Demo
 
-- 🔗 **Frontend (Vercel):** [https://simon-says-game-frontend.vercel.app](https://simon-says-game-29kw-d8hpfuv35-jenas-hansdas-projects.vercel.app/)
+- 🔗 **Frontend (Vercel):** [https://simon-says-game-frontend.vercel.app](https://simon-says-game-three-eta.vercel.app/)
 - 🔗 **Backend API (Render):** [https://simon-says-game-ss1b.onrender.com](https://simon-says-game-ss1b.onrender.com/)
 
 
