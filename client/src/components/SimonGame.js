@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import axios from "axios";
+import API from "./api"; // ✅ Use centralized axios instance
 
 const btnColors = ["red", "blue", "green", "purple"];
 
@@ -14,7 +14,7 @@ export default function SimonGame() {
   // ✅ Fetch high score from backend on mount
   const fetchHighScore = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/scores/highscore");
+      const res = await API.get("/api/scores/highscore");
       setHighScore(res.data.value);
     } catch (err) {
       console.error("Error fetching high score", err);
@@ -26,14 +26,17 @@ export default function SimonGame() {
   }, [fetchHighScore]);
 
   // ✅ Save new high score to backend
-  const saveHighScore = useCallback(async (score) => {
-    try {
-      await axios.post("http://localhost:5000/api/scores", { value: score });
-      fetchHighScore();
-    } catch (err) {
-      console.error("Error saving score", err);
-    }
-  }, [fetchHighScore]);
+  const saveHighScore = useCallback(
+    async (score) => {
+      try {
+        await API.post("/api/scores", { value: score });
+        fetchHighScore();
+      } catch (err) {
+        console.error("Error saving score", err);
+      }
+    },
+    [fetchHighScore]
+  );
 
   // ✅ Flash a button during game sequence
   const flashButton = (color) => {
