@@ -1,0 +1,215 @@
+/* ============ GENERAL STYLES ============ */
+body {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: #343a40;
+}
+
+h2, h3 {
+  margin: 0.5rem 0;
+}
+
+/* ============ BUTTON GRID ============ */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 2rem auto;
+  gap: 1.5rem;
+}
+
+.btn {
+  height: 150px;
+  width: 150px;
+  border-radius: 20%;
+  border: 8px solid #000;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ============ COLOR STYLES ============ */
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+
+/* ============ FLASH EFFECTS ============ */
+.flash {
+  background-color: white !important;
+  box-shadow: 0 0 20px white;
+}
+
+.userflash {
+  background-color: yellow !important;
+  box-shadow: 0 0 20px yellow;
+}
+
+/* ============ START BUTTON ============ */
+.start-btn {
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 13, 255, 0.3);
+  transition: all 0.3s ease;
+  animation: pulse 2.5s infinite;
+  margin-top: 1rem;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, #000dff 0%, #6b73ff 100%);
+  box-shadow: 0 12px 20px rgba(0, 13, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.start-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 10px rgba(0, 13, 255, 0.2);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 115, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 20px 15px rgba(107, 115, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(107, 115, 255, 0);
+  }
+}
+
+/* ============ STATUS TEXT ============ */
+.level {
+  font-size: 1.3rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* ============ SCORE SECTION ============ */
+.score-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.score-section h3 {
+  font-weight: 500;
+}
+
+/* ============ FORM INPUTS ============ */
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 768px) {
+  .btn {
+    height: 120px;
+    width: 120px;
+    margin: 1rem;
+  }
+
+  .btn-container {
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .start-btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+
+  input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    height: 100px;
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+.instructions {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructions h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.instructions ol {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+}
+
+.instructions p {
+  margin-top: 15px;
+  font-style: italic;
+}
